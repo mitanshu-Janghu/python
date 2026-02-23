@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
+import pickle
 
 data = {
     "hours_studied": [1,2,3,8,9,10,11],
@@ -33,6 +34,8 @@ plt.scatter(
     marker="X",
     s=200
 )
-plt.xlabel("Hours Studied")
-plt.ylabel("Attendance")
-plt.show()
+# plt.xlabel("Hours Studied")
+# plt.ylabel("Attendance")
+# plt.show()
+with open("model.pkl", "wb") as file:
+    pickle.dump(kmeans, file)

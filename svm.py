@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
-
+import pickle
 
 data = {
     "hours_studied": [1,2,3,4,5,6,7,8,9,10,11],
@@ -34,3 +34,5 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
 print("Prediction:", model.predict([[6, 85]]))
+with open("model2.pkl","wb") as file:
+    pickle.dump(model,file)
