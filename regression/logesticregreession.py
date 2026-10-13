@@ -26,8 +26,8 @@ model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 
-print("Accuracy:", accuracy_score(y_test, y_pred))
+# print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
+# print(classification_report(y_test, y_pred))
 
-print("Probability of passing:", model.predict_proba([[6, 85]])[0])
+# print("Probability of passing:", model.predict_proba([[6, 85]])[0])
